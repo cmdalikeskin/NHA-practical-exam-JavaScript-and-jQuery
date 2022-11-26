@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new article</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="/styles/basecodes.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/formcodes.css">
+
+    <!-- CDN: FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN: JQUERY LIBRARY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="main-nav scrolled">
+            <div class="nav-parent container admin_active">
+                <a href="index.html"><img src="/images/logo.png" /></a>
+                <ul class="main-nav-ul">
+                    <li id="home_redirect" class="home_redirect">Home</li>
+                    <li id="blogs_redirect" class="blogs_redirect">Blogs</li>
+                    <li id="form_redirect" class="form_redirect">Admin(form demo)</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section id="section_form">
+            <div class="content_container">
+                <h1>Add new content</h1>
+
+                <form class="article_form error" action="#">
+                    <!-- Add active class to article_form within the javascript file to hide/show content when form-content has been approved-->
+                    <div id="form_overlay"></div>
+                    <div id="form_content">
+                        <div id="author_firstname">
+                            <div>
+                                <label for="author_firstname_input">First name</label><br>
+                                <input type="text" id="author_firstname_input" name="author_firstname"><br>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div id="author_lastname">
+                            <div>
+                                <label for="author_lastname_input">Last name</label><br>
+                                <input type="text" id="author_lastname_input" name="author_lastname"><br>
+                                <p></p>
+                            </div>
+                        </div>
+
+
+                        <div id="article_email">
+                            <div>
+                                <label for="article_email_input">Enter email</label><br>
+                                <input type="email" id="article_email_input" name="article_email"><br>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div id="article_email_repeat">
+                            <div>
+                                <label for="article_email_repeat_input">Repeat email</label><br>
+                                <input type="email" id="article_email_repeat_input" name="article_email_repeat"
+                                    onpaste="return false;" autocomplete="off"><br>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div id="article_title">
+                            <div>
+                                <label for="article_title_input">Article title</label><br>
+                                <input type="text" id="article_title_input" name="article_title"
+                                    placeholder="Type your article title here."><br>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div id="article_img_url">
+                            <div>
+                                <label for="article_img_url_input">Banner img (url)</label><br>
+                                <input type="text" id="article_img_url_input" name="article_img_url_input"
+                                    placeholder="http://www.example.com (or www.example.com)"><br>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div id="article_summary">
+                            <div>
+                                <label for="article_summary_textarea">Article summary</label><br>
+                                <textarea name="article_summary" id="article_summary_textarea" rows="5"
+                                    placeholder="The summary needs to contain atleast 30 characters."></textarea>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div id="article_content">
+                            <div>
+                                <label for="article_content_textarea" id="test">Article content</label><br>
+                                <textarea name="article_content" id="article_content_textarea" rows="10"
+                                    placeholder="The summary needs to contain atleast 150 characters."></textarea>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div id="article_button_cont">
+                            <div>
+                                <button id="btn_new_article">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="container footer_container">
+            <div>
+                <h2>Thank You for visiting</h2>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi nam illo commodi
+                        exercitationem assumenda quam. Quod quisquam quas perspiciatis!</p>
+                </div>
+            </div>
+            <div>
+                <h2>Links</h2>
+                <div>
+                    <h3>Social media</h3>
+                    <div class="socials">
+                        <div>
+                            <a href="mailto:cmdalikeskin@gmail.com"><i class="fa-solid fa-envelope"></i>Mail</a>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/cmd-alikeskin/" target="_blank"><i
+                                    class="fa-brands fa-linkedin"></i>LinkedIn </a>
+                        </div>
+                    </div>
+                    <h3>Coding pages</h3>
+                    <div class="socials">
+                        <div>
+                            <a href="https://www.youtube.com/kepowob" target="_blank"><i
+                                    class="fa-brands fa-youtube"></i>Kevin
+                                Powell</a>
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/c/TraversyMedia" target="_blank"><i
+                                    class="fa-brands fa-youtube"></i>Traversy
+                                Media </a>
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/c/dcode-software" target="_blank"><i
+                                    class="fa-brands fa-youtube"></i>dcode
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Newest articles
+                </h2>
+                <div class="footer_newest_articles footer-article-links">
+                </div>
+            </div>
+            <div>
+                <h2>Highlighted articles</h2>
+                <div class="footer_highlighted_articles footer-article-links">
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="/js/formcodes.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/nav.js"></script>
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+/*        NAV                */
+.main-nav {
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    color: white;
+    transition: background-color var(--transition-speed) ease;
+}
+
+
+.main-nav-ul li {
+    transition: all var(--transition-speed) ease;
+
+}
+
+.main-nav-ul li:hover {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.nav-parent {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.main-nav-ul {
+    display: flex;
+    gap: 1rem;
+
+}
+
+.main-nav img {
+    object-fit: cover;
+    display: block;
+    height: 35px;
+    cursor: pointer;
+}
+
+.main-nav-ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.main-nav-ul li.active {
+    color: var(--primary-color);
+}
+
+.main-nav-ul li.active:hover {
+    color: white;
+}
+
+/* SCROLLED CLASS CONTENT*/
+.main-nav.scrolled {
+    position: fixed;
+    background-color: var(--white-background);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    z-index: 2;
+    transition: background-color var(--transition-speed) ease;
+    overflow: hidden;
+    height: 5rem;
+
+}
+
+.main-nav.scrolled li {
+    color: black
+}
+
+.main-nav.scrolled li:hover {
+    color: white;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.main-nav-ul li.active {
+    color: var(--primary-color);
+}
+
+.main-nav-ul li::selection{
+    background-color:transparent;
+}
+
+.nav-parent.container a:focus{
+    outline:none;
+}
+
+.nav-parent.container ::selection{
+    background-color: transparent;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+
+    <h1>Huiswerk 12.2</h1>
+
+
+
+    <br> <br>
+    <div class="content_laden" id="content_id">Lege div... moet gevuld worden</div>
+    <div class="content_laden">Lege div... moet gevuld worden</div>
+    <div class="content_laden">Lege div... moet gevuld worden</div>
+
+
+    <script>
+
+        const contentLaden = document.querySelectorAll('.content_laden')
+        // console.log(contentLaden)
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "bloginhoud.html",
+                success: (data) => {
+                    // data = $(data).find(".testcontent");
+                    // const textContent = data.prevObject;
+                    console.log(data)
+                    $("#content_id").html(data)
+
+
+                    // console.log(textContent)
+                    // let idx = 0
+
+                    // for (let j = 0; j < textContent.length; j++) {
+                    //     if (j % 2 == 0 && j <= 4) {
+                    //         $(contentLaden[idx]).html(textContent[j])
+                    //         idx++
+                    //     }
+                    // }
+
+                },
+                error: () => {
+                    $("#currency_container").html("Er is iets misgegaan bij het laden van de valuta's.")
+                }
+            })
+
+
+
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>

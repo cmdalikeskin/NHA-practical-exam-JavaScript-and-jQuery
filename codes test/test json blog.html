@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 2</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        body {
+            background: rgb(133, 133, 133);
+        }
+
+        .new_div {
+            background-color: rgb(252, 138, 138);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="div-one">
+
+
+    </div>
+
+    <script>
+
+        const textparagraph = document.getElementById('div-one')
+
+        $(document).ready(() => {
+
+            $.ajax({
+                url: "blogcontent.json",
+                success: (data) => {
+
+                    //Aanmaken van de highlighted variable
+                    const highlightObject = data.highlight
+
+                    setHighlightedContent(highlightObject)
+
+                },
+                error: () => {
+                    $("#currency_container").html("Er is iets misgegaan bij het laden van de valuta's.")
+                }
+            })
+        });
+
+
+        function setHighlightedContent(dataHighlighted) {
+
+            //Code werkend met for-loop en foreach loop
+
+            /*
+            
+            WERKENDE CODE MET EEN FOR LOOP
+            
+            */
+
+            for (let i = 0; i < dataHighlighted.length; i++) {
+                const name = dataHighlighted[i].name
+                const text = dataHighlighted[i].content
+                const imgSrc = dataHighlighted[i].img
+
+                const newDiv = document.createElement('div')
+                $(newDiv).addClass('new_div')
+
+                const contentEntirely = `
+                    <p>Name: ${name}</p>
+                    <p>${text}</p>
+                    <img src="${imgSrc}">`
+
+                $(newDiv).append(contentEntirely)
+                $(textparagraph).append(newDiv)
+            }
+
+            /*
+            
+            WERKENDE CODE MET EEN FOREACH LOOP
+            
+            */
+
+            // dataHighlighted.forEach(obj => {
+            //     //Lezen van de object-elementen
+            //     const name = obj.name
+            //     const text = obj.content
+            //     const imgSrc = obj.img
+
+            //     //Aanmaken van nieuwe div
+            //     const newDiv = document.createElement('div')
+            //     $(newDiv).addClass('new_div')
+
+            //     const contentEntirely = `
+            //         <p>Name: ${name}</p>
+            //         <p>${text}</p>
+            //         <img src="${imgSrc}">`
+
+            //     $(newDiv).append(contentEntirely)
+            //     $(textparagraph).append(newDiv)
+            // })
+
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

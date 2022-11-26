@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="/plugin/animatescroll.js-master/animatescroll.js"></script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    #test {
+        width: 100px;
+        height: 130vh;
+        background-color: red;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 400vh;
+
+    }
+
+    span {
+        width: 100%;
+        height: 1px;
+        position: fixed;
+        background-color: blue;
+        top: 50vh;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+
+    span.active {
+        opacity: 1;
+    }
+
+    #content {
+        position: fixed;
+    }
+
+    .numbers {
+        position: fixed;
+        top: 0;
+
+        margin-left: 150px;
+    }
+</style>
+
+<body onscroll="myFunction()">
+    <div id="test"></div>
+    <div style="height:200px; width:600px; overflow:auto;">
+        <div id="myDiv" style="height:100px; margin-left:100px">
+            Scroll to display the bounding client rect of the element with the border.
+        </div>
+
+    </div>
+    <span></span>
+
+    <p id="demo"></p>
+
+
+    <div class="numbers">
+        <p>positions</p>
+        <div class="numbers-of"></div>
+        <button onclick="$('.numbers-of').animatescroll({scrollSpeed:2000,easing:'easeInOutBack'});">test</button>
+    </div>
+
+    <script>
+        const element = document.getElementById("myDiv");
+        const spaninner = document.querySelector('span')
+        const numbers_of = document.querySelector('.numbers-of')
+        const button = document.querySelector('.tester')
+
+        function myFunction() {
+
+
+            const rect = element.getBoundingClientRect();
+            const innerheight = window.innerHeight;
+            console.log(rect)
+            
+            document.getElementById("demo").innerHTML =
+                "Left: " + rect.left.toFixed() +
+                ", Top: " + rect.top.toFixed() +
+                ", Width: " + rect.width
+                + ", Height: " + rect.height +
+                " innerheight:" + innerheight;
+
+            numbers_of.innerHTML =
+                "getBoundingClientRect() values <br><br>" +
+                "Scroll value vanuit Top: " + rect.top.toFixed() + "<br>" +
+                "Hoogte van 'myDiv' class: " + rect.height + "<br><br>" +
+                "Plaatsing 'myDiv' class vanuit linkerkant: " + rect.left.toFixed() + "<br>" +
+                "Breedte 'myDiv' class: " + rect.width + "<br><br>" +
+                "Tabblad hoogte:" + innerheight;
+
+
+
+            if (rect.top < innerheight - 250) {
+                spaninner.innerHTML = `
+                    Lijn wordt weergeven wanneer 'myDiv' hoger zit in het scherm dat schermhoogte
+                    <br>
+                    bv: Scherm is 900px, als de myDiv hoger is dan 900px zie je het`
+                spaninner.classList.add("active")
+
+            } else {
+                spaninner.innerHTML = ``
+                spaninner.classList.remove("active")
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+/*           Banner                           */
+.banner {
+    background:
+        linear-gradient(to bottom, rgba(128, 128, 128, 0.1), rgb(12, 12, 12, 0.8)),
+        url('https://images.unsplash.com/photo-1594398985750-3b54ec074a0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+    /* background: linear-gradient(); */
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 0rem);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-text h1 {
+    color: var(--white-background)
+}
+
+.hero-text span {
+    margin-left: 6rem;
+}
+
+.banner div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#hero-name {
+    display: block;
+    font-size: 3.4rem;
+    color: var(--primary-color);
+}
+
+
+
+/*   Section: Newest articles & Highlighted articles*/
+.newest-articles-section h2,
+.highlighted-articles-section h2,
+.technologies-section h2 {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    text-align: center;
+
+}
+
+.newest-articles-section,
+.highlighted-articles-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.articles-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Articles design (3 items next to each other on homepage)*/
+
+.article-link-con {
+    background-color: var(--white-background);
+    width: calc(var(--container-width) / 3 - 50px);
+    min-height: 430px;
+    border: 0.2px solid var(--light-gray);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: inherit;
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.article-title-con {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0.9rem;
+    min-height: 70px;
+}
+
+.article-link-con>*:not(img) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.article-sum-con {
+    margin-top: 0.8rem;
+}
+
+.article-info-con {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.article-link-con .article_img_con {
+    height: 175px;
+    object-fit: cover;
+    transition: all var(--transition-speed) ease;
+}
+
+.article-link-con span {
+    font-weight: 600;
+}
+
+
+.articles-container .article-link-con:hover img {
+    transform: scale(1.05);
+    transition: all var(--transition-speed) ease;
+}
+
+.articles-container .article-link-con .article-title-con {
+    transition: color var(--transition-speed) ease;
+}
+
+.articles-container .article-link-con:hover .article-title-con {
+    color: var(--primary-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.article-info-con {
+    margin-bottom: 1.1rem;
+}
+
+.article-link-con {
+    transform: translateY(100px);
+
+}
+
+
+/*Technologies section*/
+.technologies-section h2 {
+    text-align: center;
+}
+
+.tech-image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.tech-image-container img {
+    max-width: 100px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.tech-image-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tech-image-container p {
+    font-size: 2rem;
+    font-style: bold;
+    text-align: center;
+}
+
+.technologies-section{
+min-height: 500px;
+}
