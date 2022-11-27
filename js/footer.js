@@ -1,5 +1,54 @@
 const newArticleFooter = $('.footer_newest_articles')
 const highlightedArticleFooter = $('.footer_highlighted_articles')
+const socialsContainers = document.querySelectorAll('.socials')
+const footerPText = document.querySelector('.footer_p_text')
+const requirementsListGitHub = "https://github.com/cmdalikeskin/NHA-practical-exam-JavaScript-and-jQuery"
+
+footerContentCreate()
+function footerContentCreate() {
+
+    //First socials div
+    socialsContainers[0].innerHTML =
+        `
+            <div>
+                <a href="mailto:cmdalikeskin@gmail.com"><i class="fa-solid fa-envelope"></i>Mail</a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/cmd-alikeskin/" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn 
+                </a>
+            </div>
+        `
+
+
+    //Second socials div
+    socialsContainers[1].innerHTML =
+        `
+            <div>
+                <a href="https://www.youtube.com/kepowob" target="_blank"><i class="fa-brands fa-youtube"></i>Kevin Powell
+                </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/c/TraversyMedia" target="_blank"><i class="fa-brands fa-youtube"></i>Traversy Media 
+                </a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/c/dcode-software" target="_blank"><i class="fa-brands fa-youtube"></i>dcode 
+                </a>
+            </div>
+        `
+
+    //Text for the footer
+    footerPText.innerHTML = 
+        `
+        <p>
+            This blog has been a part of the course \"JavaScript & jQuery\" that's been given by NHA(Nationale Handelsacademie) and is part of the practical exam. This course has been successfully completed with a 10 on the 20th of October 2022.<br><br>
+            
+            The full requirements to pass for this text can be found on my <a href="${requirementsListGitHub}" style="color:var(--primary-color)">GitHub repository<i class="fa-solid fa-arrow-up-right-from-square" style="margin:0 4px 0 8px; font-size:0.8rem"></i></a> page. Click the readme file to check out the list.
+        </p>    
+        `
+}
+
+
 
 $(document).ready(() => {
 
