@@ -4,7 +4,7 @@
 }
 
 .article_form {
-    width:var(--medium-container-width);
+    width: var(--medium-container-width);
     margin: 0 auto;
     margin-top: 2rem;
     gap: 1.5rem;
@@ -92,7 +92,7 @@ button:focus {
     transition: opacity var(--transition-speed) ease;
 }
 
-#btn_new_article:hover{
+#btn_new_article:hover {
     opacity: 0.8;
     transition: opacity var(--transition-speed) ease;
 }
@@ -101,8 +101,8 @@ button:focus {
     position: relative;
 }
 
-.article_form.active.active{
-    height:500px;
+.article_form.active.active {
+    height: 500px;
 }
 
 .article_form.active #form_overlay {
@@ -142,4 +142,22 @@ button:focus {
 #form_content div div:has(p.error) textarea {
     border: 1px solid red;
     border-radius: 3px;
+}
+
+@media (max-width:668px) {
+
+    h1 {
+        padding-left: 2rem;
+    }
+
+    .content_container {
+        max-width: 100%;
+    }
+
+    .article_form {
+        max-width: 100%;
+        padding: 0 2rem;
+    }
+
+
 }

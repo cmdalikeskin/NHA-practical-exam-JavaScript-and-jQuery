@@ -74,7 +74,6 @@
     transition: background-color var(--transition-speed) ease;
     overflow: hidden;
     height: 5rem;
-
 }
 
 .main-nav.scrolled li {
@@ -90,14 +89,119 @@
     color: var(--primary-color);
 }
 
-.main-nav-ul li::selection{
-    background-color:transparent;
-}
-
-.nav-parent.container a:focus{
-    outline:none;
-}
-
-.nav-parent.container ::selection{
+.main-nav-ul li::selection {
     background-color: transparent;
+}
+
+.nav-parent.container a:focus {
+    outline: none;
+}
+
+.nav-parent.container ::selection {
+    background-color: transparent;
+}
+
+
+
+
+@media(min-width:668px) {
+    .hamburger-icon-holder {
+        display: none;
+        transition: all var(--transition-speed) ease;
+    }
+}
+
+@media (max-width: 668px) {
+    .hamburger-icon-holder {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-parent .logo-nav img {
+        width: 25px;
+        height: 25px;
+
+    }
+
+    .hamburger-btn {
+        position: absolute;
+        font-size: 1.4rem;
+        color: var(--primary-color)
+    }
+
+    .main-nav-ul {
+        position: fixed;
+        flex-direction: column;
+        top: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        border-radius: 5px;
+        width: 75%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: none;
+        color:black;
+    }
+
+    .main-nav-ul li {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
+    .main-nav-ul.active {
+        display: block;
+    }
+
+    .hamburger-icon-holder.active :nth-child(1) {
+        display: none;
+    }
+
+    .hamburger-icon-holder.active :nth-child(2) {
+        display: block;
+    }
+
+    .hamburger-icon-holder :nth-child(1) {
+        display: block;
+    }
+
+    .hamburger-icon-holder :nth-child(2) {
+        display: none;
+    }
+
+    .hamburger-btn-open {
+        color: var(--primary-color);
+    }
+
+    .new_div a {
+        min-height: 250px;
+    }
+
+    .new_div img {
+        display: none;
+    }
+
+    /* SCROLLED CONTENT*/
+    .main-nav.scrolled {
+        height: 4rem;
+    }
+
+    .main-nav.scrolled .nav-parent {
+        height: 4rem;
+    }
+
+    body.active::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: all 10s ease;
+    }
 }

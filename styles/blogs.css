@@ -105,3 +105,18 @@
 #btn-go-top .fa-solid.fa-arrow-up {
     margin-left: 5px;
 }
+@media (max-width:668px) {
+    
+    .blog_img_container{
+        display: none;
+    }
+    .blog_content_container{
+        flex:1;
+    }
+
+    .blog_content_container h2,
+    .blog_content_paragraph{
+        margin-bottom: .5rem;
+    }
+
+}

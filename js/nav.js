@@ -4,6 +4,9 @@ const navHome = document.getElementById('home_redirect')
 const navBlog = document.getElementById('blogs_redirect')
 const navForm = document.getElementById('form_redirect')
 const navLi = document.querySelectorAll(".main-nav-ul li")
+const hamburgerBtn = document.querySelector(".hamburger-icon-holder")
+const navMenuItems = document.querySelector(".main-nav-ul")
+const bodyEl = document.querySelector("body")
 
 document.addEventListener("visibilitychange", () => {
 
@@ -43,3 +46,8 @@ navLi.forEach(li => {
     })
 })
 
+hamburgerBtn.addEventListener("click", () =>{
+    navMenuItems.classList.toggle('active')
+    hamburgerBtn.classList.toggle('active')
+    bodyEl.classList.toggle('active')
+})
