@@ -4,8 +4,12 @@ const btnScrollTop = document.querySelector('#btn-go-top')
 //jQuery plugin
 //Blogs button onderaan, gebruikte plugin ( https://plugins.compzets.com/animatescroll/ ) 
 btnScrollTop.addEventListener('click', () => {
-    $(".filler").animatescroll({ scrollSpeed: 2000, easing: 'easeInOutQuart' });
+    scrollToTop()
 })
+
+function scrollToTop() {
+    $(".filler").animatescroll({ scrollSpeed: 2000, easing: 'easeInOutQuart' });
+}
 
 $(document).ready(() => {
 
@@ -303,6 +307,7 @@ $(document).ready(() => {
                         let maxPages = totalpages
                         slicerFunction(itemValue)
                         ulWrapperChecker(itemValue, maxPages)
+                        scrollToTop()
                     })
                 })
             }
