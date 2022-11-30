@@ -142,7 +142,17 @@
     border-radius: 3px;
 }
 
-.pagination_ul_container li.active{
+.pagination_ul_container li.active {
     background-color: var(--primary-color);
-    color:white;;
+    color: white;
+}
+
+.pagination_div_container .pagination_ul_container .pagination-filler-text {
+    padding-bottom: 0 !important;
+    letter-spacing: 0.2;
+    display: flex;
+    align-items: flex-end;
+    border: none;
+    cursor: auto;
+
 }
