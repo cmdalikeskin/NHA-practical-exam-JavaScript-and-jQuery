@@ -21,7 +21,7 @@ $(document).ready(() => {
             //Amount of items to show on page
             let itemsPerPage = 5
 
-
+            //Starting values that will be overwritten once the buttons have been pressed
             let currentPage = 1
             let totalpages = Math.ceil(newArticleObject.length / itemsPerPage)
 
@@ -82,9 +82,6 @@ $(document).ready(() => {
 
                 animationBlogs()
             }
-
-
-
 
 
             //Functions to make the pagination option work
@@ -309,11 +306,6 @@ $(document).ready(() => {
                     })
                 })
             }
-
-
-
-
-
 
 
         },
