@@ -31,7 +31,9 @@ $(document).ready(() => {
 
 
             slicerFunction(1)
+            
             ulWrapperChecker(currentPage, totalpages)
+
 
 
             //Function to slice the content shown on page
@@ -42,12 +44,12 @@ $(document).ready(() => {
                 let sliceStart = sliceEnd - 5;
 
 
-                let slicedContent = newArticleObject.slice(sliceStart, sliceEnd)
+                let reverseContent = newArticleObject.slice().reverse()
+
+                let slicedContent = reverseContent.slice(sliceStart, sliceEnd)
 
 
                 slicedContent.forEach(item => {
-
-
                     const authorFName = item.firstname
                     const authorLName = item.lastname
                     const articleTitle = item.articletitle
@@ -57,7 +59,6 @@ $(document).ready(() => {
                     const creationDate = item.creationDate
 
                     const slicedCont = articleSummary.slice(0, 250)
-
 
                     let newDiv = document.createElement('div')
 
@@ -78,12 +79,10 @@ $(document).ready(() => {
                                 </div>
                             </a>`
 
-
                     $(newDiv).append(newItem)
 
                     $(blogContainer).append(newDiv)
                 })
-
                 animationBlogs()
             }
 

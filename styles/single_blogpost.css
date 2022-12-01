@@ -27,7 +27,7 @@
 
 .blogpost_content h1 {
     letter-spacing: 0.25rem;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
 }
 
 .blogpost_content .paragraphs_holder {
@@ -59,8 +59,8 @@
     margin-bottom: 0.5rem;
 }
 
-.accessibility-container div:last-child{
-    width:90%;
+.accessibility-container div:last-child {
+    width: 90%;
     margin: 0 auto;
 }
 
