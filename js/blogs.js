@@ -30,8 +30,8 @@ $(document).ready(() => {
             let totalpages = Math.ceil(newArticleObject.length / itemsPerPage)
 
 
-            slicerFunction(1)
-            
+            slicerFunction(currentPage)
+
             ulWrapperChecker(currentPage, totalpages)
 
 
@@ -43,7 +43,7 @@ $(document).ready(() => {
                 let sliceEnd = pageValue * 5
                 let sliceStart = sliceEnd - 5;
 
-
+                //Mak a variale (let) with the JSON data in reverse, without mutating the original var
                 let reverseContent = newArticleObject.slice().reverse()
 
                 let slicedContent = reverseContent.slice(sliceStart, sliceEnd)
