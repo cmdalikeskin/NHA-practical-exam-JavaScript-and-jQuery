@@ -17,6 +17,8 @@ $(document).ready(() => {
         url: "NHAblogcontent.json",
         success: (data) => {
 
+
+
             //Create new blog section
             const newArticleObject = data.main_content
             // setNewBlogOverview(newArticleObject)
@@ -30,6 +32,24 @@ $(document).ready(() => {
             let totalpages = Math.ceil(newArticleObject.length / itemsPerPage)
 
 
+            //--------------------------------------------------------------------------------------------------------------------//
+            //Find every filler content that's divisible by 2 (array method) and give it a new bannerurl value (/images/filler-image2.png).
+            //This way the filler content won't be filled up with the same image over and over again
+            finder(newArticleObject)
+
+            function finder(data) {
+
+                let tester = data.filter(dt => dt.id == "filler")
+                let newImage = "/images/filler-image2.png"
+
+                tester.forEach((test, idx) => {
+                    if (idx % 2) {
+                        test.bannerurl = newImage
+                    }
+                })
+            }
+            //--------------------------------------------------------------------------------------------------------------------//
+
             slicerFunction(currentPage)
 
             ulWrapperChecker(currentPage, totalpages)
@@ -40,8 +60,8 @@ $(document).ready(() => {
             function slicerFunction(pageValue) {
                 $(blogContainer).html("")
 
-                let sliceEnd = pageValue * 5
-                let sliceStart = sliceEnd - 5;
+                let sliceEnd = pageValue * itemsPerPage
+                let sliceStart = sliceEnd - itemsPerPage;
 
                 //Mak a variale (let) with the JSON data in reverse, without mutating the original var
                 let reverseContent = newArticleObject.slice().reverse()

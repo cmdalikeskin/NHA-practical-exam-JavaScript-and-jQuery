@@ -148,10 +148,18 @@
     }
 
     .main-nav-ul li {
+        font-family: inherit;
+        font-size: 20px;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        padding:1.4rem 0;
+
     }
 
+    .main-nav-ul.active .active{
+        background-color: var(--primary-color);
+        color:white;
+    }
 
     .main-nav-ul.active {
         display: block;
