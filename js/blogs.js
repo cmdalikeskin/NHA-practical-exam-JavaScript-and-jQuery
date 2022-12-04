@@ -5,6 +5,7 @@ const btnScrollTop = document.querySelector('#btn-go-top')
 //Blogs button onderaan, gebruikte plugin ( https://plugins.compzets.com/animatescroll/ ) 
 btnScrollTop.addEventListener('click', () => {
     scrollToTop()
+    console.log('test')
 })
 
 function scrollToTop() {
