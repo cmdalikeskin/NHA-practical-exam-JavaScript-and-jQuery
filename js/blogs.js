@@ -78,7 +78,7 @@ $(document).ready(() => {
                     const directToHref = item.directTo
                     const creationDate = item.creationDate
 
-                    const slicedCont = articleSummary.slice(0, 250)
+                    const slicedCont = articleSummary.slice(0, 145)
 
                     let newDiv = document.createElement('div')
 
@@ -89,7 +89,7 @@ $(document).ready(() => {
                                 </div>
                                 <div class="blog_content_container">
                                     <h2>${articleTitle}</h2>
-                                    <p class="blog_content_paragraph">${slicedCont}</p>
+                                    <p class="blog_content_paragraph">${slicedCont}...</p>
                                     <p class="blog_content_info">
                                         Geschreven door
                                         <span class="blog_content_author_name">${authorFName} ${authorLName}</span>

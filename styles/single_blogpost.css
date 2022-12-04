@@ -67,3 +67,12 @@
 .span-tooltip {
     border-bottom: 2px dashed var(--primary-color);
 }
+
+@media (max-width:668px) {
+    .blogpost_accessibility{
+        display: none;
+    }
+    .blogpost_content{
+        width: 100%;
+    }
+}

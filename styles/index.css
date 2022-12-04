@@ -64,7 +64,6 @@
 
 .article-link-con {
     background-color: var(--white-background);
-    width: calc(var(--container-width) / 3 - 50px);
     min-height: 430px;
     border: 0.2px solid var(--light-gray);
     border-radius: 9px;
@@ -168,6 +167,32 @@
     text-align: center;
 }
 
-.technologies-section{
-min-height: 500px;
+.technologies-section {
+    min-height: 500px;
+}
+
+.new_div {
+    width: calc(100% / 3 - 50px);
+}
+
+
+@media (max-width:800px) {
+    .articles-container {
+        flex-direction: column;
+    }
+
+    .new_div {
+        width: 100%;
+    }
+
+    .new_div a {
+        min-height: 250px;
+    }
+
+    .new_div img {
+        display: none;
+    }
+    .article-title-con{
+        color:var(--primary-color)
+    }
 }

@@ -192,13 +192,7 @@
         color: var(--primary-color);
     }
 
-    .new_div a {
-        min-height: 250px;
-    }
 
-    .new_div img {
-        display: none;
-    }
 
     /* SCROLLED CONTENT*/
     .main-nav.scrolled {
