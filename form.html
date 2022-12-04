@@ -21,6 +21,11 @@
     <!-- CDN: JQUERY LIBRARY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <script src="js/formcodes.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/nav.js" defer></script>
+
+
 </head>
 
 <body>
@@ -168,11 +173,55 @@
         </div>
     </footer>
 
-    <script src="js/formcodes.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/nav.js"></script>
-    </script>
 
+
+    <!-- Redirect button for main website: codes.alikeskin.nl -->
+    <a href="http://codes.alikeskin.nl/" class="redirect-holder">
+        <div>
+            <p>Back to <br> <span class="redirect-link">codes.alikeskin.nl</span></p>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </div>
+        </div>
+    </a>
+    <style>
+        .redirect-holder {
+            text-decoration: none;
+            color: white;
+            position: fixed;
+            width: 190px;
+            padding: 0.5rem;
+            left: -139px;
+            top: 50%;
+            display: flex;
+            background-color: black;
+            align-items: center;
+            transition: all 200ms ease-in-out
+        }
+
+        .redirect-link {
+            text-decoration: underline;
+        }
+
+        .redirect-holder div:nth-child(1) {
+            width: 160px;
+        }
+
+        .redirect-holder div:nth-child(2) {
+            width: 40px;
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.4rem;
+        }
+
+        .redirect-holder:hover {
+            left: 0px;
+            transition: all 200ms ease-in-out
+        }
+    </style>
+    <!-- END OF REDIRECT LINK -->
 
 </body>
 
