@@ -37,7 +37,7 @@ body {
 }
 
 .content_container {
-    width: var(--medium-container-width);
+    max-width: var(--medium-container-width);
     margin-left: auto;
     margin-right: auto;
 }
