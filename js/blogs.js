@@ -40,7 +40,7 @@ $(document).ready(() => {
             function finder(data) {
 
                 let tester = data.filter(dt => dt.id == "filler")
-                let newImage = "/images/filler-image2.png"
+                let newImage = "images/filler-image2.png"
 
                 tester.forEach((test, idx) => {
                     if (idx % 2) {

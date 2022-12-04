@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Ali's Blog</title>
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="/styles/basecodes.css">
-    <link rel="stylesheet" href="/styles/nav.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/single_blogpost.css">
+    <link rel="stylesheet" href="../styles/basecodes.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/single_blogpost.css">
+
+
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
 
     <!-- CDN: FONT AWESOME -->
@@ -33,19 +35,23 @@
         <nav class="main-nav scrolled">
 
             <div class="nav-parent container blogs_active">
-                <a href="index.html"><img src="/images/logo.png" /></a>
+                <div>
+                    <a href="http://codes.alikeskin.nl/" class="logo-nav"><img src="../images/logo.png" />
+                    </a>
+                </div>
                 <ul class="main-nav-ul">
-                    <li id="home_redirect" class="home_redirect">Home</li>
-                    <li id="blogs_redirect" class="blogs_redirect">Blogs</li>
-                    <li id="form_redirect" class="form_redirect">Admin(form demo)</li>
+                    <li id="home_redirect" class="home_redirect"><a href="../index.html">Home</a></li>
+                    <li id="blogs_redirect" class="blogs_redirect"><a href="../blogs.html">Blogs</a></li>
+                    <li id="form_redirect" class="form_redirect"><a href="../form.html">Admin(form demo)</a></li>
                 </ul>
+                <div class="hamburger-icon-holder">
+                    <i class="fa-solid fa-bars hamburger-btn hamburger-btn-open"></i>
+                    <i class="fa-solid fa-xmark hamburger-btn hamburger-btn-close"></i>
+                    </i>
+                </div>
             </div>
         </nav>
     </header>
-
-
-
-
 
 
     <main>
@@ -81,8 +87,8 @@
                             <li>Creativity. An app should be fun and allow kids to express themselves within the limits
                                 set
                                 by parents. Messenger Kids features a library of specially chosen
-                                
-                                    GIFs, frames,
+
+                                GIFs, frames,
                                 stickers,
                                 masks and drawing tools that let them decorate photos and videos and have more fun
                                 with
@@ -117,7 +123,7 @@
                         <p>Change the font-size of the text</p>
                         <p>Font-size: <span class="font-size-value">16</span> px </p>
                         <p style="font-size:10px; font-style: italic;"> Range between 5 and 40<br>
-                        16 being default.</p>
+                            16 being default.</p>
                         <div id="slider-fontsize"></div>
                     </div>
 
@@ -142,10 +148,8 @@
     <footer>
         <div class="container footer_container">
             <div>
-                <h2>Thank You for visiting</h2>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eligendi nam illo commodi
-                        exercitationem assumenda quam. Quod quisquam quas perspiciatis!</p>
+                <h2>Thank you for checking out this demo blog</h2>
+                <div class="footer_p_text">
                 </div>
             </div>
             <div>
@@ -153,31 +157,9 @@
                 <div>
                     <h3>Social media</h3>
                     <div class="socials">
-                        <div>
-                            <a href="mailto:cmdalikeskin@gmail.com"><i class="fa-solid fa-envelope"></i>Mail</a>
-                        </div>
-                        <div>
-                            <a href="https://www.linkedin.com/in/cmd-alikeskin/" target="_blank"><i
-                                    class="fa-brands fa-linkedin"></i>LinkedIn </a>
-                        </div>
                     </div>
                     <h3>Coding pages</h3>
                     <div class="socials">
-                        <div>
-                            <a href="https://www.youtube.com/kepowob" target="_blank"><i
-                                    class="fa-brands fa-youtube"></i>Kevin
-                                Powell</a>
-                        </div>
-                        <div>
-                            <a href="https://www.youtube.com/c/TraversyMedia" target="_blank"><i
-                                    class="fa-brands fa-youtube"></i>Traversy
-                                Media </a>
-                        </div>
-                        <div>
-                            <a href="https://www.youtube.com/c/dcode-software" target="_blank"><i
-                                    class="fa-brands fa-youtube"></i>dcode
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -193,12 +175,10 @@
                 </div>
             </div>
         </div>
-
-
     </footer>
-    <script src="/js/footer.js"></script>
-    <script src="/js/nav.js"></script>
-    <script src="/js/single_blogpost.js"></script>
+    <script src="footer-pages.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/single_blogpost.js"></script>
 
 </body>
 

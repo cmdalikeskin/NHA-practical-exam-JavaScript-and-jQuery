@@ -31,20 +31,6 @@ if (classListChecker.classList.contains("homepage_active")) {
 //Functions to open the pages belwo
 
 
-navLi.forEach(li => {
-    li.addEventListener("click", () => {
-        console.log(li)
-        if (li.classList.contains("home_redirect")) {
-            window.open("/index.html", "_self")
-        }
-        else if (li.classList.contains("blogs_redirect")) {
-            window.open("/blogs.html", "_self")
-        }
-        else if (li.classList.contains("form_redirect")) {
-            window.open("/form.html", "_self")
-        }
-    })
-})
 
 hamburgerBtn.addEventListener("click", () =>{
     navMenuItems.classList.toggle('active')

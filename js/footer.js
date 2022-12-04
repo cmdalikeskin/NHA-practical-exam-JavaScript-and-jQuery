@@ -4,6 +4,8 @@ const socialsContainers = document.querySelectorAll('.socials')
 const footerPText = document.querySelector('.footer_p_text')
 const requirementsListGitHub = "https://github.com/cmdalikeskin/NHA-practical-exam-JavaScript-and-jQuery"
 
+
+
 footerContentCreate()
 function footerContentCreate() {
 
@@ -53,7 +55,8 @@ function footerContentCreate() {
 $(document).ready(() => {
 
     $.ajax({
-        url: "/NHAblogcontent.json",
+
+                url: "NHAblogcontent.json",
         success: (data) => {
 
             //Create new article section
@@ -68,7 +71,8 @@ $(document).ready(() => {
             setHighlightedArticleFooter(highlightObject)
         },
         error: () => {
-            $("#currency_container").html("Something went wrong while loading the content.")
+            console.log("Unable to load the file")
+            
         }
     })
 });

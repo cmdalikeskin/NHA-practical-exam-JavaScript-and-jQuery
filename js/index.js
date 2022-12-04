@@ -6,7 +6,7 @@ const highArticleContentCon = document.querySelector('.highlighted-articles-sect
 $(document).ready(() => {
 
     $.ajax({
-        url: "/NHAblogcontent.json",
+        url: "NHAblogcontent.json",
         success: (data) => {
 
             //Create new article section
