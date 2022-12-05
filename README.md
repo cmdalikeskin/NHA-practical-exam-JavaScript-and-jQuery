@@ -14,30 +14,30 @@ Heb op index.html een lijst met 3 nieuwste, 3 gehighlighte blogartikelen en onde
 
 -	Een detailpagina met 1 blog-artikel
 
-o	Het blogartikel ‘Working Moms Stay Connected to Children Through Messenger Kids’ heeft een gedetailleerde pagina. Deze is te openen vanuit de startpagina (onder ‘New articles’), de footer of via de Blogs pagina.
+Het blogartikel ‘Working Moms Stay Connected to Children Through Messenger Kids’ heeft een gedetailleerde pagina. Deze is te openen vanuit de startpagina (onder ‘New articles’), de footer of via de Blogs pagina.
 
 -	Beheerpagina met een formulier
 
-o	Bij correct invoeren van de velden krijg je een scherm met “End of form demo” en word je teruggestuurd naar het beginscherm.
+Bij correct invoeren van de velden krijg je een scherm met “End of form demo” en word je teruggestuurd naar het beginscherm.
 
 Blog dient minimaal de volgende technologieën te bevatten:
 
 -	JavaScript & jQuery
 
-o	Elk script-document bevat beide elementen
+Elk script-document bevat beide elementen
 
 -	Ajax
 
-o	Index.html en footer.html maken gebruik van de Ajax-technologie
+Index.html en footer.html maken gebruik van de Ajax-technologie
 
 -	jQuery plug-in
 
-o	Binnen blogs.js een 3rd party plug-in gebruikt voor een scroll effect binnen Blogs-pagina. Gebruikt om pagina smooth te laten scrollen nadat er op een button (back to top) wordt geklikt. 
+Binnen blogs.js een 3rd party plug-in gebruikt voor een scroll effect binnen Blogs-pagina. Gebruikt om pagina smooth te laten scrollen nadat er op een button (back to top) wordt geklikt. 
 
 -	Formuliervalidatie
 
-o	Binnen Admin(form demo) en het bijbehorende bestand (formcodes.js) vind je de codes om de formuliervelden te verifiëren.
+Binnen Admin(form demo) en het bijbehorende bestand (formcodes.js) vind je de codes om de formuliervelden te verifiëren.
 
 -	jQuery animatie
 
-o	Binnen blogs.js & index.js worden de opacity aanpassingen van de blog-artikelen uitgevoerd. Index.js regel 147, blogs.js regel 77
+Binnen blogs.js & index.js worden de opacity aanpassingen van de blog-artikelen uitgevoerd. Index.js regel 147, blogs.js regel 77
