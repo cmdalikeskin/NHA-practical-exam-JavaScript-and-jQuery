@@ -6,7 +6,7 @@ Blog dient ten minste de volgende pagina’s te bevatten:
 
 -	Eenvoudig HTML-document met 5 zelfgemaakte blogartikelen
 
-Deze blogartikelen zijn te vinden in ‘NHAblogcontent.json’
+*Deze blogartikelen zijn te vinden in ‘NHAblogcontent.json’*
 
 -	Overzichtspagina met 3 blogartikelen
 
