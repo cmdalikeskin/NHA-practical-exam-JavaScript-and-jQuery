@@ -79,7 +79,15 @@ $(document).ready(() => {
                     const directToHref = item.directTo
                     const creationDate = item.creationDate
 
-                    const slicedCont = articleSummary.slice(0, 145)
+                    // Set the slice amount based on screenwidth
+                    let browserWidth = window.innerWidth
+                    let sliceAmount = 0
+
+                    browserWidth > 668 ? sliceAmount = 145 : sliceAmount = 100
+
+                    const slicedCont = articleSummary.slice(0, sliceAmount)
+                    // Set the slice amount based on screenwidth
+
 
                     let newDiv = document.createElement('div')
 

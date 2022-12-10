@@ -62,7 +62,7 @@
 .blog_content_container {
     width: 65%;
     object-fit: cover;
-    padding: 2rem;
+    padding: 1rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -81,8 +81,15 @@
     margin-bottom: 1.5rem;
 }
 
+
+.blog_content_info {
+   
+    font-size: 0.8rem;
+}
+
 .blog_content_info span {
     font-weight: bold;
+
 }
 
 
