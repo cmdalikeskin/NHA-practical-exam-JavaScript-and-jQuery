@@ -83,7 +83,7 @@
 
 
 .blog_content_info {
-   
+
     font-size: 0.8rem;
 }
 
@@ -152,7 +152,7 @@
 }
 
 /*Media Query */
-@media (max-width:668px) {
+@media (max-width:800px) {
 
     .blog_img_container {
         display: none;
@@ -165,12 +165,22 @@
     .blog_content_container h2,
     .blog_content_paragraph {
         margin-bottom: .5rem;
+        font-size: 1.2rem;
     }
 
+    .blog_content_container h2 {
+        font-size: 1.2rem;
+    }
+
+    .blog_content_paragraph{
+        font-size: 0.9rem;
+    }
+    
     .pagination_ul_container li {
         cursor: pointer;
-        padding: 0.7rem 0.9rem;
+        padding: 0.4rem 0.8rem;
 
     }
+
 
 }

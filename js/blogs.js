@@ -83,7 +83,7 @@ $(document).ready(() => {
                     let browserWidth = window.innerWidth
                     let sliceAmount = 0
 
-                    browserWidth > 668 ? sliceAmount = 145 : sliceAmount = 100
+                    browserWidth > 800 ? sliceAmount = 145 : sliceAmount = 100
 
                     const slicedCont = articleSummary.slice(0, sliceAmount)
                     // Set the slice amount based on screenwidth
@@ -192,6 +192,9 @@ $(document).ready(() => {
                 //Reset wrapper (parent-element)
                 ulWrapper.innerHTML = ""
 
+                
+
+                
                 for (let i = 1; i <= 5; i++) {
                     let newLi = document.createElement('li')
                     newLi.setAttribute("value", [i])

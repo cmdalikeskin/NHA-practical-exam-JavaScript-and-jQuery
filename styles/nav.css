@@ -110,14 +110,14 @@
 
 
 
-@media(min-width:668px) {
+@media(min-width:800px) {
     .hamburger-icon-holder {
         display: none;
         transition: all var(--transition-speed) ease;
     }
 }
 
-@media (max-width: 668px) {
+@media (max-width: 800px) {
     .hamburger-icon-holder {
         display: flex;
         width: 2rem;

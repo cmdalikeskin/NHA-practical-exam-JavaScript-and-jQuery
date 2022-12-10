@@ -68,7 +68,7 @@
     border-bottom: 2px dashed var(--primary-color);
 }
 
-@media (max-width:668px) {
+@media (max-width:800px) {
     .blogpost_accessibility{
         display: none;
     }

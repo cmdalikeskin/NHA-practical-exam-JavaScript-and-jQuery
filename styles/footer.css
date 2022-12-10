@@ -82,7 +82,7 @@ footer {
 
 
 
-@media (max-width:668px) {
+@media (max-width:800px) {
     .container.footer_container {
         grid-template-columns:1fr;
     }
